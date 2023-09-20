@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:04:42 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 16:43:17 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 17:06:38 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	valid_base(char *base)
 	return (1);
 }
 
-int	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base(long long nbr, char *base)
 {
 	long long	nbr_cpy;
 	int			base_num;
