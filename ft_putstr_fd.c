@@ -6,13 +6,13 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 10:59:03 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 11:00:56 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 11:27:29 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putstr(char *s)
+void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
@@ -21,7 +21,7 @@ void	ft_putstr(char *s)
 	i = 0;
 	while (s[i])
 	{
-		ft_putchar(s[i]);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 	return ;

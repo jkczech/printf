@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:48:10 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 10:50:53 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 12:03:48 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	ft_printf("string %c", 'X');
-	printf("string %c", 'X');
+	ft_printf("string %X priont\n", "XX");
+	//printf("string %üfefa<d5s\n", "XX");
 	return (0);
 }
