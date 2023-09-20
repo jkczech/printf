@@ -6,13 +6,13 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:48:10 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 10:28:44 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 10:50:53 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	main()
+int	main(void)
 {
 	ft_printf("string %c", 'X');
 	printf("string %c", 'X');

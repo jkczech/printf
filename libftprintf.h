@@ -6,13 +6,12 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 10:26:31 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 10:52:01 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
-
 
 //malloc, free, (size_t)
 # include <stdlib.h>
