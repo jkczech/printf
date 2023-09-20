@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 09:48:10 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 16:11:38 by jkoupy           ###   ########.fr       */
+/*   Created: 2023/09/20 16:05:55 by jkoupy            #+#    #+#             */
+/*   Updated: 2023/09/20 16:06:11 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	main(void)
+int	ft_strlen(char *str)
 {
-	ft_printf("%X", 15);
-	printf("%X", 15);
-	return (0);
+	int	len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }
