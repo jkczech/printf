@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 10:00:23 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 10:26:31 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 //printf
 # include <stdio.h>
 
-void	ft_putchar(char c);
+void	ft_putchar(int c);
 void	ft_putnbr(int n);
 int		ft_printf(const char *format, ...);
 
