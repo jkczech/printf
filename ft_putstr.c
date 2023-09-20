@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 11:00:54 by jkoupy           ###   ########.fr       */
+/*   Created: 2023/09/20 10:59:03 by jkoupy            #+#    #+#             */
+/*   Updated: 2023/09/20 11:00:56 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-//size_t
-# include <stddef.h>
-//malloc, free
-# include <stdlib.h>
-//write
-# include <unistd.h>
-//variadic funcs
-# include <stdarg.h>
+void	ft_putstr(char *s)
+{
+	size_t	i;
 
-//extra libs for testing to delete
-//printf
-# include <stdio.h>
-
-void	ft_putchar(int c);
-void	ft_putnbr(int n);
-int		ft_printf(const char *format, ...);
-
-//unused to delete
-int		count_vars(const char *format);
-
-#endif
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
+	return ;
+}

@@ -6,14 +6,14 @@
 #    By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 10:10:19 by jkoupy            #+#    #+#              #
-#    Updated: 2023/09/20 10:21:21 by jkoupy           ###   ########.fr        #
+#    Updated: 2023/09/20 11:02:04 by jkoupy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = test
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c ft_putnbr.c ft_putchar.c test.c
+SRCS = ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c test.c
 
 OBJS = $(SRCS:.c=.o)
 
