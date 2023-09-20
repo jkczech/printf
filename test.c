@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:48:10 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 16:11:38 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 16:44:27 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,11 @@
 
 int	main(void)
 {
-	ft_printf("%X", 15);
-	printf("%X", 15);
+	int	res;
+
+	res = ft_printf("%X", 1568);
+	printf ("res: %d\n", res);
+	res = printf("%X", 1568);
+	printf ("res: %d\n", res);
 	return (0);
 }

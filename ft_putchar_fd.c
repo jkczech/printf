@@ -6,13 +6,14 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:48:59 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 12:03:02 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 16:45:44 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putchar_fd(int c, int fd)
+int	ft_putchar_fd(int c, int fd)
 {
 	write(1, &c, fd);
+	return (1);
 }

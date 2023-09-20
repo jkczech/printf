@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:04:42 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 16:10:42 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 16:43:17 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,44 +19,49 @@ static int	valid_base(char *base)
 
 	i = 0;
 	if (ft_strlen(base) <= 1)
-		return (1);
+		return (0);
 	while (base[i])
 	{
 		if (base[i] == '+' || base[i] == '-')
-			return (1);
+			return (0);
 		j = i + 1;
 		while (base[j])
 		{
 			if (base[i] == base[j])
-				return (1);
+				return (0);
 			j++;
 		}
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base(int nbr, char *base)
 {
 	long long	nbr_cpy;
 	int			base_num;
+	int			printlen;
 
 	nbr_cpy = nbr;
-	if (valid_base(base) == 1)
-		return ;
+	printlen = 0;
+	if (!valid_base(base))
+		return (0);
 	base_num = ft_strlen(base);
-	if (base_num <= 1)
-		return ;
 	if (nbr_cpy < 0)
 	{
 		ft_putchar_fd('-', 1);
+		printlen++;
 		nbr_cpy = -nbr_cpy;
 	}
 	if (nbr_cpy >= base_num)
 	{
-		ft_putnbr_base(nbr_cpy / base_num, base);
+		printlen += ft_putnbr_base(nbr_cpy / base_num, base);
 		nbr_cpy %= base_num;
 	}
 	if (nbr_cpy < base_num)
+	{
 		ft_putchar_fd(base[nbr_cpy], 1);
+		printlen++;
+	}
+	return (printlen);
 }

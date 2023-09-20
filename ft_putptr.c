@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 10:59:03 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 16:48:06 by jkoupy           ###   ########.fr       */
+/*   Created: 2023/09/20 16:36:35 by jkoupy            #+#    #+#             */
+/*   Updated: 2023/09/20 16:39:25 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putptr(unsigned long long ptr)
 {
-	size_t	i;
+	int	printlen;
 
-	if (!s)
-		return (0);
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
-	return (i);
+	ft_putstr_fd("0x", 1);
+	printlen = 2;
+	printlen += ft_putnbr_base(ptr, "0123456789abcdef");
+	return (printlen);
 }
