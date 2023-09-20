@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 17:02:29 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 17:11:19 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,7 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 		else
-		{
-			write(1, &format[i], 1);
-			printlen++;
-		}
+			printlen += write(1, &format[i], 1);
 		i++;
 	}
 	va_end(vars);
