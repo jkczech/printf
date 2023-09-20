@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 17:11:19 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 17:20:48 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	print_va(va_list args, char spec)
 	else if (spec == 'p')
 		printlen += ft_putptr(va_arg(args, unsigned long long));
 	else if (spec == 'u')
-		return (0);
+		printlen += ft_putnbr(va_arg(args, unsigned int));
 	else if (spec == 'x')
 		printlen += ft_putnbr_base(va_arg(args, int), "0123456789abcdef");
 	else if (spec == 'X')

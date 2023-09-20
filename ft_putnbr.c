@@ -6,13 +6,13 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:48:13 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 16:47:08 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/20 17:21:09 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putnbr(int n)
+int	ft_putnbr(long long n)
 {
 	long long	nn;
 	int			printlen;
