@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 09:47:40 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 11:50:20 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	isspecifier(char c)
 {
 	return (c == 'c' || c == 's' || c == 'p'
 		|| c == 'd' || c == 'i' || c == 'u'
-		|| c == 'x' || c == 'X');
+		|| c == 'x' || c == 'X' || c == '%');
 }
 
 int	print_va(va_list args, char spec)
@@ -40,8 +40,6 @@ int	print_va(va_list args, char spec)
 		printlen += ft_putnbr_base(va_arg(args, int), "0123456789ABCDEF");
 	else if (spec == '%')
 		printlen += ft_putchar_fd('%', 1);
-	else
-		printlen += ft_putstr_fd("invalid specifier", 2);
 	return (printlen);
 }
 
@@ -61,7 +59,8 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			printlen += print_va(vars, format[i + 1]);
-			i++;
+			if (isspecifier(format[i + 1]))
+				i++;
 		}
 		else
 			printlen += write(1, &format[i], 1);

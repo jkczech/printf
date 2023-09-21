@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:04:42 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 10:36:28 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 12:26:59 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putnbr_base(unsigned int nbr, char *base)
 {
-	int			base_num;
-	int			printlen;
+	unsigned int	base_num;
+	int				printlen;
 
 	printlen = 0;
 	base_num = ft_strlen(base);
