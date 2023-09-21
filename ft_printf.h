@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 16:31:52 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 17:32:49 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@
 # include <stdio.h>
 
 //ft_is.c
+int	isdigit(char c);
 int	isspecifier(char c);
 int	isflag(const char *format, int *i);
 
 //other.c
+int	print_flag_va(const char *format, int *i, va_list args);
 int	ft_printf(const char *format, ...);
 int	ft_putchar_fd(int c, int fd);
 int	ft_puthexa(int nbr, char spec);

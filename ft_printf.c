@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 16:33:20 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 17:21:08 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,34 +31,6 @@ int	print_simple_va(va_list args, char spec)
 		printlen += ft_puthexa(va_arg(args, int), spec);
 	else if (spec == '%')
 		printlen += ft_putchar_fd('%', 1);
-	return (printlen);
-}
-
-int	print_flag_va(const char *format, int *i, va_list args)
-{
-	int	printlen;
-	int	num;
-
-	printlen = 0;
-	num = va_arg(args, int);
-	if ((format[*i + 1] == '+' || format[*i + 1] == ' ')
-		&& (format[*i + 2] == 'd' || format[*i + 2] == 'i'))
-	{
-		if (num >= 0)
-			printlen += ft_putchar_fd(format[*i + 1], 1);
-		printlen += ft_putnbr(num);
-	}
-	else if (format[*i + 1] == '#'
-		&& (format[*i + 2] == 'x' || format[*i + 2] == 'X'))
-	{
-		if (num != 0)
-		{
-			printlen += ft_putchar_fd('0', 1);
-			printlen += ft_putchar_fd(format[*i + 2], 1);
-		}
-		printlen += ft_puthexa(num, format[*i + 2]);
-	}
-	*i += 2;
 	return (printlen);
 }
 

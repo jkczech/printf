@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:36:35 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 16:17:26 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 17:21:08 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@ int	ft_putptr(unsigned long int ptr)
 	if (ptr == 0)
 		return (ft_putstr_fd("(nil)", 1));
 	printlen = 0;
-	if (ptr != 0)
-		printlen += ft_putstr_fd("0x", 1);
+	printlen += ft_putstr_fd("0x", 1);
 	printlen += ft_putnbr_ptr(ptr);
 	return (printlen);
 }
