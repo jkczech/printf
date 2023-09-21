@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 10:35:04 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 13:40:11 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@
 //printf
 # include <stdio.h>
 
+//ft_is.c
+int	isspecifier(char c);
+int	isflag(const char *format, int *i);
+
+//other.c
 int	ft_printf(const char *format, ...);
 int	ft_putchar_fd(int c, int fd);
 int	ft_putnbr_base(unsigned int nbr, char *base);
