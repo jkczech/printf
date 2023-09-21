@@ -6,18 +6,18 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 10:59:03 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 16:48:06 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 09:52:14 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
 	if (!s)
-		return (0);
+		return (ft_putstr_fd("(null)", fd));
 	i = 0;
 	while (s[i])
 	{

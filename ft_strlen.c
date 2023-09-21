@@ -6,11 +6,11 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:05:55 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/20 16:06:11 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 09:47:43 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(char *str)
 {
