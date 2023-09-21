@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:48:10 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 13:19:11 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 15:59:01 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 int	main(void)
 {
 
-	char c = 'A';
-    char *str = "Hello, world!";
-    int d = -1;
-    unsigned int u = 123;
-    int x = 0x1A3F;
-    int X = 0xABCD;
+	char c = 0;
+    char *str = 0;
+    int d = 0;
+    unsigned int u = 0;
+    int x = 0;
+    int X = 0;
 
 /*
 	char c = NULL;

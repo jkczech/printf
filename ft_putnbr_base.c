@@ -6,11 +6,23 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:04:42 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 12:26:59 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/21 16:31:10 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_puthexa(int nbr, char spec)
+{
+	int	printlen;
+
+	printlen = 0;
+	if (spec == 'x')
+		printlen += ft_putnbr_base(nbr, "0123456789abcdef");
+	else if (spec == 'X')
+		printlen += ft_putnbr_base(nbr, "0123456789ABCDEF");
+	return (printlen);
+}
 
 int	ft_putnbr_base(unsigned int nbr, char *base)
 {
