@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 16:02:06 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 18:26:04 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,103 +76,103 @@ int	ft_printf(const char *format, ...)
 	return (printlen);
 }
 
-// #include <stdio.h>
+/*#include <stdio.h>
 
-// int	main(void)
-// {
+int	main(void)
+{
 
-// 	char c = 'C';
-// 	char *str = "string";
-// 	void *ptr = &str;
-// 	int d = -123456;
-// 	int i = +123456;
-// 	unsigned int	u = 123456;
-// 	int x = 0xfa12;
-// 	int X = 0xfa12;
+	char c = 'C';
+	char *str = "string";
+	void *ptr = &str;
+	int d = -123456;
+	int i = +123456;
+	unsigned int	u = 123456;
+	int x = 0xfa12;
+	int X = 0xfa12;
 
-// 	int	res;
+	int	res;
 
-// 	res = 0;
-// 	printf("----------------------------------------------\n");
-// 	printf("Basic Tests:\n");
-// 	printf("ft_printf:\n");
-// 	res = ft_printf("\t%c, %s, %p, %d, %i, %u, %x, %X, %%\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("printf:\n");
-// 	res = printf("\t%c, %s, %p, %d, %i, %u, %x, %X, %%\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("----------------------------------------------\n");
+	res = 0;
+	printf("----------------------------------------------\n");
+	printf("Basic Tests:\n");
+	printf("ft_printf:\n");
+	res = ft_printf("\t%c, %s, %p, %d, %i, %u, %x, %X, %%\n",
+			c, str, ptr, d, i, u, x, X);
+	printf("\tReturn value: %d\n", res);
+	printf("printf:\n");
+	res = printf("\t%c, %s, %p, %d, %i, %u, %x, %X, %%\n",
+			c, str, ptr, d, i, u, x, X);
+	printf("\tReturn value: %d\n", res);
+	printf("----------------------------------------------\n");
 
-// 	c = NULL;
-// 	str = NULL;
-// 	ptr = NULL;
-// 	d = NULL;
-// 	i = NULL;
-// 	u = NULL;
-// 	x = NULL;
-// 	X = NULL;
+	c = NULL;
+	str = NULL;
+	ptr = NULL;
+	d = NULL;
+	i = NULL;
+	u = NULL;
+	x = NULL;
+	X = NULL;
 
-// 	printf("NULL Tests:\n");
-// 	printf("ft_printf:\n");
-// 	res = ft_printf("\t%c, %s, %p, %d, %i, %u, %x, %X, %%\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("printf:\n");
-// 	res = printf("\t%c, %s, %p, %d, %i, %u, %x, %X, %%\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("----------------------------------------------\n");
+	printf("NULL Tests:\n");
+	printf("ft_printf:\n");
+	res = ft_printf("\t%c, %s, %p, %d, %i, %u, %x, %X, %%\n",
+			c, str, ptr, d, i, u, x, X);
+	printf("\tReturn value: %d\n", res);
+	printf("printf:\n");
+	res = printf("\t%c, %s, %p, %d, %i, %u, %x, %X, %%\n",
+			c, str, ptr, d, i, u, x, X);
+	printf("\tReturn value: %d\n", res);
+	printf("----------------------------------------------\n");
 
-// 	c = NULL;
-// 	str = NULL;
-// 	ptr = NULL;
-// 	d = NULL;
-// 	i = NULL;
-// 	u = NULL;
-// 	x = NULL;
-// 	X = NULL;
+	c = NULL;
+	str = NULL;
+	ptr = NULL;
+	d = NULL;
+	i = NULL;
+	u = NULL;
+	x = NULL;
+	X = NULL;
 
-// 	printf("Space (' ') Tests:\n");
-// 	printf("ft_printf:\n");
-// 	res = ft_printf("\t% c, % s, % p, % d, % i, % u, % x, % X, % %\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("printf:\n");
-// 	res = printf("\t% c, % s, % p, % d, % i, % u, % x, % X, % %\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("----------------------------------------------\n");
+	printf("Space (' ') Tests:\n");
+	printf("ft_printf:\n");
+	res = ft_printf("\t% c, % s, % p, % d, % i, % u, % x, % X, % %\n",
+			c, str, ptr, d, i, u, x, X);
+	printf("\tReturn value: %d\n", res);
+	printf("printf:\n");
+	res = printf("\t% c, % s, % p, % d, % i, % u, % x, % X, % %\n",
+			c, str, ptr, d, i, u, x, X);
+	printf("\tReturn value: %d\n", res);
+	printf("----------------------------------------------\n");
 
-// 	c = NULL;
-// 	str = NULL;
-// 	ptr = NULL;
-// 	d = NULL;
-// 	i = NULL;
-// 	u = NULL;
-// 	x = NULL;
-// 	X = NULL;
+	c = NULL;
+	str = NULL;
+	ptr = NULL;
+	d = NULL;
+	i = NULL;
+	u = NULL;
+	x = NULL;
+	X = NULL;
 
-// 	printf("Plus (+) Tests:\n");
-// 	printf("ft_printf:\n");
-// 	res = ft_printf("\t%+c, %+s, %+p, %+d, %+i, %+u, %+x, %+X, %+%\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("printf:\n");
-// 	res = printf("\t%+c, %+s, %+p, %+d, %+i, %+u, %+x, %+X, %+%\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("----------------------------------------------\n");
+	printf("Plus (+) Tests:\n");
+	printf("ft_printf:\n");
+	res = ft_printf("\t%+c, %+s, %+p, %+d, %+i, %+u, %+x, %+X, %+%\n",
+			c, str, ptr, d, i, u, x, X);
+	printf("\tReturn value: %d\n", res);
+	printf("printf:\n");
+	res = printf("\t%+c, %+s, %+p, %+d, %+i, %+u, %+x, %+X, %+%\n",
+			c, str, ptr, d, i, u, x, X);
+	printf("\tReturn value: %d\n", res);
+	printf("----------------------------------------------\n");
 
-// 	c = NULL;
-// 	str = NULL;
-// 	ptr = NULL;
-// 	d = NULL;
-// 	i = NULL;
-// 	u = NULL;
-// 	x = 1;
-// 	X = 1;
+	c = NULL;
+	str = NULL;
+	ptr = NULL;
+	d = NULL;
+	i = NULL;
+	u = NULL;
+	x = 1;
+	X = 1;
 
 // 	printf("Sharp (#) Tests:\n");
 // 	printf("ft_printf:\n");
@@ -182,19 +182,6 @@ int	ft_printf(const char *format, ...)
 // 	printf("printf:\n");
 // 	res = printf("\t%#c, %#s, %#p, %#d, %#i, %#u, %#x, %#X, %#%\n",
 // 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("----------------------------------------------\n");
-
-// 	printf("Custom Test:\n");
-// 	printf("ft_printf:\n");
-// 	res = ft_printf("\t%c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c\n",
-// 			'A', "42", 42, 42, 42, 42, 42, 'B', "-42", -42, -42, -42,
-// 			-42, 42, 'C', "0", 0, 0, 0, 0, 42, 0);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("printf:\n");
-// 	res = printf("\t%c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c\n",
-// 			'A', "42", 42, 42, 42, 42, 42, 'B', "-42", -42, -42, -42,
-// 			-42, 42, 'C', "0", 0, 0, 0, 0, 42, 0);
 // 	printf ("\tReturn value: %d\n", res);
 // 	printf("----------------------------------------------\n");
 // 	return (0);

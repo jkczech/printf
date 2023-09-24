@@ -6,7 +6,11 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/09/24 16:06:53 by jkoupy           ###   ########.fr       */
+=======
+/*   Updated: 2023/09/24 17:02:22 by jkoupy           ###   ########.fr       */
+>>>>>>> 5811f84 (final?)
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +39,6 @@ int	print_flag_va(const char *format, int *i, va_list args);
 int	ft_printf(const char *format, ...);
 int	ft_puthexa(int nbr, char spec);
 int	ft_putnbr_base(unsigned int nbr, char *base);
-int	ft_putnbr_fd(long long n, int fd);
 int	ft_putptr_fd(unsigned long int ptr, int fd);
 
 //unused to delete
