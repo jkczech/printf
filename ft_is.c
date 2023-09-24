@@ -6,16 +6,11 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:38:33 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 17:38:09 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 13:36:00 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	isdigit(char c)
-{
-	return (c >= '0' && c <= '9');
-}
 
 int	isspecifier(char c)
 {
@@ -31,6 +26,6 @@ int	isflag(const char *format, int *i)
 		|| (format[*i + 1] == '#'
 			&& (format[*i + 2] == 'x' || format[*i + 2] == 'X'))
 		|| (format[*i + 1] == ' ' && format[*i + 2] == 's')
-		|| (format[*i + 1] == ' ' && isdigit(format[*i + 2])
+		|| (format[*i + 1] == ' ' && ft_isdigit(format[*i + 2])
 			&& format[*i + 3] == 's'));
 }

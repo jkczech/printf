@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 17:32:49 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/22 15:18:40 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 # include <stdio.h>
 
 //ft_is.c
-int	isdigit(char c);
+int	ft_isdigit(char c);
 int	isspecifier(char c);
 int	isflag(const char *format, int *i);
 

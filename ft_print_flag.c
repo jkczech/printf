@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:19:55 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 17:47:03 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/22 15:19:28 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,11 @@ int	print_sharp(const char *format, int *i, int num)
 int	print_space(const char *format, int *i, char *str)
 {
 	int	printlen;
-	int	pad;
 
 	printlen = 0;
 	if (format[*i + 2] == 's')
 		printlen += ft_putstr_fd(str, 1);
-	else if (isdigit(format[*i + 2]) && format[*i + 3] == 's')
+	else if (ft_isdigit(format[*i + 2]) && format[*i + 3] == 's')
 	{
 		printlen += ft_putchar_fd(' ', 1);
 		printlen += ft_putstr_fd(str, 1);
@@ -62,7 +61,7 @@ int	print_flag_va(const char *format, int *i, va_list args)
 
 	printlen = 0;
 	if (format[*i + 2] == 's'
-		|| (isdigit(format[*i + 2]) && format[*i + 3] == 's'))
+		|| (ft_isdigit(format[*i + 2]) && format[*i + 3] == 's'))
 		str = va_arg(args, char *);
 	else
 		num = va_arg(args, int);

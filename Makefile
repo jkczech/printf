@@ -6,34 +6,57 @@
 #    By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 10:10:19 by jkoupy            #+#    #+#              #
-#    Updated: 2023/09/21 17:21:05 by jkoupy           ###   ########.fr        #
+#    Updated: 2023/09/24 13:35:13 by jkoupy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = test
+END = \033[0m
+RED = \033[31m
+GREEN = \033[32m
+YELLOW = \033[33m
+BLUE = \033[34m
+MAGENTA = \033[35m
+CYAN = \033[36m
+WHITE = \033[37m
+
+NAME = libftprintf.a
+RM = rm -rf
 CC = cc
-CFLAGS = #-Wall -Wextra -Werror
-SRCS = ft_is.c ft_print_flag.c ft_printf.c ft_putchar_fd.c ft_putnbr_base.c \
-	   ft_putnbr.c ft_putptr.c ft_putstr_fd.c ft_strlen.c test.c
+CFLAGS = -Wall -Wextra -Werror
+AR = ar rcs
+LIBFT = libft/libft.a
+SRCS = ft_is.c ft_print_flag.c ft_printf.c ft_putnbr_base.c \
+	   ft_putnbr.c ft_putptr.c ft_strlen.c
+
 
 OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+all:	$(LIBFT) $(NAME)
+
+%.o:	%.c
+	@$(CC) -c $(CFLAGS) $< -o $@
+
+bonus:	all
 
 
-all: $(NAME)
+$(NAME):	$(OBJS) $(LIBFT)
+	@cp $(LIBFT) $(NAME)
+	@$(AR) $(NAME) $(OBJS)
+	@echo "$(GREEN)✅ $(NAME) created$(END) ✅"
 
-bonus: all
-
-%.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@
+$(LIBFT):
+	@make bonus -sC libft
+	@echo "$(GREEN)✅ $(LIBFT) created$(END) ✅"
 
 clean:
-	rm -f $(OBJS)
+	@$(RM) $(OBJS)
+	@make clean -sC libft
+	@echo "$(RED)🗑️  Object files removed  🗑️$(END)"
 
 fclean: clean
-	rm -f $(NAME)
+	@$(RM) $(NAME)
+	@make -s fclean -C libft
+	@echo "$(RED)🗑️  $(NAME) removed 🗑️$(END)"
 
 re: fclean all
 
