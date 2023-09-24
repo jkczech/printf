@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 18:26:04 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 18:45:13 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	ft_printf(const char *format, ...)
 	return (printlen);
 }
 
-/*#include <stdio.h>
+/* #include <stdio.h>
 
 int	main(void)
 {
@@ -174,15 +174,29 @@ int	main(void)
 	x = 1;
 	X = 1;
 
-// 	printf("Sharp (#) Tests:\n");
-// 	printf("ft_printf:\n");
-// 	res = ft_printf("\t%#c, %#s, %#p, %#d, %#i, %#u, %#x, %#X, %#%\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("printf:\n");
-// 	res = printf("\t%#c, %#s, %#p, %#d, %#i, %#u, %#x, %#X, %#%\n",
-// 			c, str, ptr, d, i, u, x, X);
-// 	printf ("\tReturn value: %d\n", res);
-// 	printf("----------------------------------------------\n");
-// 	return (0);
-// }
+	printf("Sharp (#) Tests:\n");
+	printf("ft_printf:\n");
+	res = ft_printf("\t%#c, %#s, %#p, %#d, %#i, %#u, %#x, %#X, %#%\n",
+			c, str, ptr, d, i, u, x, X);
+	printf ("\tReturn value: %d\n", res);
+	printf("printf:\n");
+	res = printf("\t%#c, %#s, %#p, %#d, %#i, %#u, %#x, %#X, %#%\n",
+			c, str, ptr, d, i, u, x, X);
+	printf ("\tReturn value: %d\n", res);
+	printf("----------------------------------------------\n");
+
+	printf("Custom Test:\n");
+	printf("ft_printf:\n");
+	res = ft_printf("\t%c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c\n",
+			'A', "42", 42, 42, 42, 42, 42, 'B', "-42", -42, -42, -42,
+			-42, 42, 'C', "0", 0, 0, 0, 0, 42, 0);
+	printf ("\tReturn value: %d\n", res);
+	printf("printf:\n");
+	res = printf("\t%c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c\n",
+			'A', "42", 42, 42, 42, 42, 42, 'B', "-42", -42, -42, -42,
+			-42, 42, 'C', "0", 0, 0, 0, 0, 42, 0);
+	printf ("\tReturn value: %d\n", res);
+	printf("----------------------------------------------\n");
+	return (0);
+}
+ */
