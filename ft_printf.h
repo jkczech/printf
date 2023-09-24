@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 18:51:57 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 18:55:59 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,5 @@ int	ft_printf(const char *format, ...);
 int	ft_puthexa(int nbr, char spec);
 int	ft_putnbr_base(unsigned int nbr, char *base);
 int	ft_putptr_fd(unsigned long int ptr, int fd);
-
-//unused to delete
-int	count_vars(const char *format);
 
 #endif
