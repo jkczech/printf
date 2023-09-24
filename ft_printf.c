@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 18:46:13 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 18:46:49 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	ft_printf(const char *format, ...)
 	return (printlen);
 }
 
-/* //#include <stdio.h>
+/* #include <stdio.h>
 
 int	main(void)
 {
