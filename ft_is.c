@@ -6,20 +6,25 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:38:33 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 15:24:45 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 16:03:11 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	isspecifier(char c)
+int	isspec(char c)
 {
 	return (c == 'c' || c == 's' || c == 'p'
 		|| c == 'd' || c == 'i' || c == 'u'
 		|| c == 'x' || c == 'X' || c == '%');
 }
 
-int	isflag(const char *format, int *i)
+int	isflag(char c)
+{
+	return (c == ' ' || c == '#' || c == '+');
+}
+
+int	is_correct_flag(const char *format, int *i)
 {
 	return (((format[*i + 1] == '+' || format[*i + 1] == ' ')
 			&& (format[*i + 2] == 'd' || format[*i + 2] == 'i'))
@@ -30,7 +35,7 @@ int	isflag(const char *format, int *i)
 			&& format[*i + 3] == 's'));
 }
 
-int	isskipflag(const char *format, int *i)
+int	is_skip_flag(const char *format, int *i)
 {
-	return (isspecifier(format[*i + 2]));
+	return (isflag(format[*i + 1]) && isspec(format[*i + 2]));
 }

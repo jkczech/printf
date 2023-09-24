@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 15:44:33 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 16:02:06 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,16 @@ int	read_va(const char *format, int *i, va_list args)
 	int	printlen;
 
 	printlen = 0;
-	if (isflag(format, i))
+	if (is_correct_flag(format, i))
 		printlen += print_flag_va(format, i, args);
-	else if (isskipflag(format, i))
+	else if (is_skip_flag(format, i))
 	{
 		printlen += print_simple_va(args, format[*i + 2]);
 		(*i)++;
 	}
 	else
 		printlen += print_simple_va(args, format[*i + 1]);
-	if (isspecifier(format[*i + 1]))
+	if (isspec(format[*i + 1]))
 		(*i)++;
 	return (printlen);
 }
@@ -182,6 +182,19 @@ int	ft_printf(const char *format, ...)
 // 	printf("printf:\n");
 // 	res = printf("\t%#c, %#s, %#p, %#d, %#i, %#u, %#x, %#X, %#%\n",
 // 			c, str, ptr, d, i, u, x, X);
+// 	printf ("\tReturn value: %d\n", res);
+// 	printf("----------------------------------------------\n");
+
+// 	printf("Custom Test:\n");
+// 	printf("ft_printf:\n");
+// 	res = ft_printf("\t%c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c\n",
+// 			'A', "42", 42, 42, 42, 42, 42, 'B', "-42", -42, -42, -42,
+// 			-42, 42, 'C', "0", 0, 0, 0, 0, 42, 0);
+// 	printf ("\tReturn value: %d\n", res);
+// 	printf("printf:\n");
+// 	res = printf("\t%c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c%s%d%i%u%x%X%% %c\n",
+// 			'A', "42", 42, 42, 42, 42, 42, 'B', "-42", -42, -42, -42,
+// 			-42, 42, 'C', "0", 0, 0, 0, 0, 42, 0);
 // 	printf ("\tReturn value: %d\n", res);
 // 	printf("----------------------------------------------\n");
 // 	return (0);
