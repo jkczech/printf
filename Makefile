@@ -6,18 +6,13 @@
 #    By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 10:10:19 by jkoupy            #+#    #+#              #
-#    Updated: 2023/09/24 14:08:13 by jkoupy           ###   ########.fr        #
+#    Updated: 2023/09/24 14:17:15 by jkoupy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 END = \033[0m
 RED = \033[31m
 GREEN = \033[32m
-YELLOW = \033[33m
-BLUE = \033[34m
-MAGENTA = \033[35m
-CYAN = \033[36m
-WHITE = \033[37m
 
 NAME = libftprintf.a
 RM = rm -rf
@@ -25,7 +20,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 LIBFT = libft/libft.a
-SRCS = ft_is.c ft_print_flag.c ft_printf.c ft_putnbr_base.c ft_putnbr.c ft_putptr.c
+SRCS = ft_is.c ft_print_flag.c ft_printf.c ft_putnbr_base.c ft_putptr.c
 
 
 OBJS = $(SRCS:.c=.o)
