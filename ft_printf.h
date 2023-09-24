@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/22 15:18:40 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 14:27:37 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int	ft_printf(const char *format, ...);
 int	ft_putchar_fd(int c, int fd);
 int	ft_puthexa(int nbr, char spec);
 int	ft_putnbr_base(unsigned int nbr, char *base);
-int	ft_putnbr(long long n);
-int	ft_putptr(unsigned long int ptr);
+int	ft_putnbr_fd(long long n, int fd);
+int	ft_putptr_fd(unsigned long int ptr, int fd);
 int	ft_putstr_fd(char *s, int fd);
 int	ft_strlen(char *str);
 

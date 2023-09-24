@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:19:55 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/22 15:19:28 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 14:28:14 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	print_plus_space(const char *format, int *i, int num)
 	printlen = 0;
 	if (num >= 0)
 		printlen += ft_putchar_fd(format[*i + 1], 1);
-	printlen += ft_putnbr(num);
+	printlen += ft_putnbr_fd(num, 1);
 	return (printlen);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 14:09:27 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 14:28:00 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ int	print_simple_va(va_list args, char spec)
 	if (spec == 'c')
 		printlen += ft_putchar_fd(va_arg(args, int), 1);
 	else if (spec == 'i' || spec == 'd')
-		printlen += ft_putnbr(va_arg(args, int));
+		printlen += ft_putnbr_fd(va_arg(args, int), 1);
 	else if (spec == 's')
 		printlen += ft_putstr_fd(va_arg(args, char *), 1);
 	else if (spec == 'p')
-		printlen += ft_putptr(va_arg(args, unsigned long long));
+		printlen += ft_putptr_fd(va_arg(args, unsigned long long), 1);
 	else if (spec == 'u')
-		printlen += ft_putnbr(va_arg(args, unsigned int));
+		printlen += ft_putnbr_fd(va_arg(args, unsigned int), 1);
 	else if (spec == 'x' || spec == 'X')
 		printlen += ft_puthexa(va_arg(args, int), spec);
 	else if (spec == '%')
