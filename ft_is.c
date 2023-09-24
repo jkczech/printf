@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:38:33 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 13:36:00 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 15:24:45 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,9 @@ int	isflag(const char *format, int *i)
 		|| (format[*i + 1] == ' ' && format[*i + 2] == 's')
 		|| (format[*i + 1] == ' ' && ft_isdigit(format[*i + 2])
 			&& format[*i + 3] == 's'));
+}
+
+int	isskipflag(const char *format, int *i)
+{
+	return (isspecifier(format[*i + 2]));
 }

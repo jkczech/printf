@@ -6,7 +6,7 @@
 #    By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 10:10:19 by jkoupy            #+#    #+#              #
-#    Updated: 2023/09/24 14:17:15 by jkoupy           ###   ########.fr        #
+#    Updated: 2023/09/24 15:00:30 by jkoupy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ $(LIBFT):
 clean:
 	@$(RM) $(OBJS)
 	@make clean -sC libft
-	@echo "$(RED)🗑️  Object files removed  🗑️$(END)"
+	@echo "$(RED)🗑️  object files removed  🗑️$(END)"
 
 fclean: clean
 	@$(RM) $(NAME)

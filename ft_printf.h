@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:52:20 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/24 14:27:37 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 15:25:03 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,11 @@
 //variadic funcs
 # include <stdarg.h>
 
-//extra libs for testing to delete
-//printf
-# include <stdio.h>
-
 //ft_is.c
 int	ft_isdigit(char c);
 int	isspecifier(char c);
 int	isflag(const char *format, int *i);
+int	isskipflag(const char *format, int *i);
 
 //other.c
 int	print_flag_va(const char *format, int *i, va_list args);
