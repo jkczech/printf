@@ -6,7 +6,7 @@
 /*   By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:44:22 by jkoupy            #+#    #+#             */
-/*   Updated: 2023/09/21 17:21:08 by jkoupy           ###   ########.fr       */
+/*   Updated: 2023/09/24 14:09:27 by jkoupy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,3 +70,33 @@ int	ft_printf(const char *format, ...)
 	va_end(vars);
 	return (printlen);
 }
+
+/*
+int	main(void)
+{
+
+	char c = 0;
+    char *str = 0;
+    int d = 0;
+    unsigned int u = 0;
+    int x = 0;
+    int X = 0;
+
+
+	char c = NULL;
+    char *str = NULL;
+    int d = NULL;
+    unsigned int u = NULL;
+    int x = NULL;
+    int X = NULL;
+
+	int	res;
+
+	res = 0;
+	res = ft_printf(" NULL %s NULL ", NULL);
+	printf ("\nReturn value: %d\n", res);
+	res = printf(" NULL %s NULL ", NULL);
+	printf ("\nReturn value: %d\n", res);
+	return (0);
+}
+*/

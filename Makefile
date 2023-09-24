@@ -6,7 +6,7 @@
 #    By: jkoupy <jkoupy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 10:10:19 by jkoupy            #+#    #+#              #
-#    Updated: 2023/09/24 13:35:13 by jkoupy           ###   ########.fr        #
+#    Updated: 2023/09/24 14:08:13 by jkoupy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 LIBFT = libft/libft.a
-SRCS = ft_is.c ft_print_flag.c ft_printf.c ft_putnbr_base.c \
-	   ft_putnbr.c ft_putptr.c ft_strlen.c
+SRCS = ft_is.c ft_print_flag.c ft_printf.c ft_putnbr_base.c ft_putnbr.c ft_putptr.c
 
 
 OBJS = $(SRCS:.c=.o)
